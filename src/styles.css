@@ -1,14 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 
-div #container {
-  background-color: lightblue;
-}
 .gallery {
   margin: 10px 50px;
 }
 
 .gallery img {
-  width: 200px;
-  padding: 15px;
+  width: 100%;
+  margin: 15px;
+}
+.shast {
+  margin-left: 20px;
 }

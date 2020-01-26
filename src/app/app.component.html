@@ -1,9 +1,12 @@
 <div class="gallery">
   <div class="row">
-    <div *ngFor="let movie of movies">
+    <div class="col-3" *ngFor="let movie of movies">
       <div><img src="assets/images/{{movie.image}}"></div>
       <div (click)="clickEvent(movies.indexOf(movie))" class="fa"
-        [ngClass]="{'fa-star': movie.isLiked,'fa-star-o': !movie.isLiked}"></div>
+        [ngClass]="{'fa-star': movie.isFavorite,'fa-star-o': !movie.isFavorite}"></div>
+
+      <div (click)="likesCount(movies.indexOf(movie))" class="fa shast"
+        [ngClass]="{'fa-thumbs-up': movie.isLiked,'fa-thumbs-o-up': !movie.isLiked}">{{" "+movie.numberOfLikes}}</div>
     </div>
   </div>
 </div>
