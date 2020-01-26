@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MoviesService } from './movies.service';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +11,15 @@ export class AppComponent {
   title = 'movieRating';
   numberOfLikes;
   isLiked: boolean = true;
-  film = ''
+  film = '';
 
 
   constructor() {
-    this.movieFetch();
+    let service = new MoviesService();
+    service.movieFetch().then(obj => {
+      this.movies = obj
+    })
+
   }
 
   likesCount(j) {
@@ -28,13 +33,7 @@ export class AppComponent {
     }
   }
 
-  movieFetch() {
-    fetch("assets/data.json").then(response => response.json()).then(obj => {
-      this.movies = obj;
-    })
 
-
-  }
 
   movies = [
     // {
