@@ -1,0 +1,32 @@
+[
+    {
+        "image": "1.jpg",
+        "isFavorite": true,
+        "isLiked": true,
+        "numberOfLikes": 1
+    },
+    {
+        "image": "2.jpg",
+        "isFavorite": true,
+        "isLiked": false,
+        "numberOfLikes": 2
+    },
+    {
+        "image": "3.jpg",
+        "isFavorite": false,
+        "isLiked": true,
+        "numberOfLikes": 3
+    },
+    {
+        "image": "4.jpg",
+        "isFavorite": true,
+        "isLiked": true,
+        "numberOfLikes": 4
+    },
+    {
+        "image": "5.jpg",
+        "isFavorite": true,
+        "isLiked": true,
+        "numberOfLikes": 5
+    }
+]
