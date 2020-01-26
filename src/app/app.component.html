@@ -1,8 +1,9 @@
 <div class="gallery">
   <div class="row">
-    <div *ngFor="let image of images">
-      <div><img src="assets/images/{{image}}"></div>
-      <div (click)="clickEvent($event)" class="fa" [ngClass]="{'fa-star': condition,'fa-star-o': !condition}"></div>
+    <div *ngFor="let movie of movies">
+      <div><img src="assets/images/{{movie.image}}"></div>
+      <div (click)="clickEvent(movies.indexOf(movie))" class="fa"
+        [ngClass]="{'fa-star': movie.isLiked,'fa-star-o': !movie.isLiked}"></div>
     </div>
   </div>
 </div>
