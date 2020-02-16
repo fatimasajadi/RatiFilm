@@ -1,14 +1,7 @@
-<div class="gallery">
-  <div class="row">
-    <div class="col-3" *ngFor="let movie of movies">
-      <div><img src="assets/images/{{movie.image}}"></div>
-      <div (click)="clickEvent(movies.indexOf(movie))" class="fa"
-        [ngClass]="{'fa-star': movie.isFavorite,'fa-star-o': !movie.isFavorite}"></div>
+<nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand">RatiFilm</a>
 
-      <div (click)="likesCount(movies.indexOf(movie))" class="fa shast"
-        [ngClass]="{'fa-thumbs-up': movie.isLiked,'fa-thumbs-o-up': !movie.isLiked}">{{" "+movie.numberOfLikes}}</div>
-    </div>
-  </div>
-</div>
+    <a class="btn btn-outline-success my-2 my-sm-0">LogIn</a>
+</nav>
 
-<app-login></app-login>
+<router-outlet></router-outlet>
