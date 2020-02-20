@@ -1,7 +1,7 @@
 <div class="gallery">
     <div class="row">
         <div class="col-3" *ngFor="let movie of movies">
-            <div><img src="assets/images/{{movie.image}}"></div>
+            <div><img routerLink="/details/{{movie.id}}" src="assets/images/{{movie.image}}"></div>
             <div (click)="clickEvent(movies.indexOf(movie))" class="fa"
                 [ngClass]="{'fa-star': movie.isFavorite,'fa-star-o': !movie.isFavorite}"></div>
 

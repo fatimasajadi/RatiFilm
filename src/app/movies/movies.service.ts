@@ -1,3 +1,4 @@
+
 export class MoviesService {
     movieFetch() {
         return fetch("assets/data.json")

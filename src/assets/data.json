@@ -3,30 +3,35 @@
         "image": "1.jpg",
         "isFavorite": true,
         "isLiked": true,
-        "numberOfLikes": 1
+        "numberOfLikes": 1,
+        "id": 1
     },
     {
         "image": "2.jpg",
         "isFavorite": true,
         "isLiked": false,
-        "numberOfLikes": 2
+        "numberOfLikes": 2,
+        "id": 2
     },
     {
         "image": "3.jpg",
         "isFavorite": false,
         "isLiked": true,
-        "numberOfLikes": 3
+        "numberOfLikes": 3,
+        "id": 3
     },
     {
         "image": "4.jpg",
         "isFavorite": true,
         "isLiked": true,
-        "numberOfLikes": 4
+        "numberOfLikes": 4,
+        "id": 4
     },
     {
         "image": "5.jpg",
         "isFavorite": true,
         "isLiked": true,
-        "numberOfLikes": 5
+        "numberOfLikes": 5,
+        "id": 5
     }
 ]
