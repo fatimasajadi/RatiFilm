@@ -9,11 +9,13 @@ import { UserandpassValidators } from './userandpass.validators';
 })
 export class LoginComponent {
   form = new FormGroup({
-    email: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-      UserandpassValidators.cannotContainSpace,
-    ]),
+    email: new FormControl('', [Validators.required,
+    Validators.minLength(3)],
+
+
+
+      UserandpassValidators.shouldBeUnique,
+    ),
 
     password: new FormControl('', [
       Validators.required,

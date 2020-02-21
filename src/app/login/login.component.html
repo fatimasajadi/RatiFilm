@@ -7,6 +7,7 @@
                 <div *ngIf="form.get('email').errors.required">Email address must be provided!</div>
                 <div *ngIf="form.get('email').errors.minlength">Must have at least 3 characters!</div>
                 <div *ngIf="form.get('email').errors.cannotContainSpace">can not contain space!</div>
+                <div *ngIf="form.get('email').errors.shouldBeUnique">This username is already taken!</div>
 
             </div>
         </div>
