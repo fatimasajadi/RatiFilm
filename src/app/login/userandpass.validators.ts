@@ -15,7 +15,7 @@ export class UserandpassValidators {
                 else
                     resolve(null);
 
-            }, 2000);
+            }, 6000);
         });
     }
 }

@@ -3,6 +3,7 @@
         <div class="form-group">
             <label for="email">Email address</label>
             <input formControlName=email id="email" type="text" class="form-control" placeholder="Enter Email">
+            <div *ngIf="form.get('email').pending" class="fa fa-spinner fa-pulse"> </div>
             <div class="alert alert-danger" *ngIf="(form.get('email')).invalid && (form.get('email')).touched">
                 <div *ngIf="form.get('email').errors.required">Email address must be provided!</div>
                 <div *ngIf="form.get('email').errors.minlength">Must have at least 3 characters!</div>
