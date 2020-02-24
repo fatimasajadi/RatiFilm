@@ -11,9 +11,6 @@ export class LoginComponent {
   form = new FormGroup({
     email: new FormControl('', [Validators.required,
     Validators.minLength(3)],
-
-
-
       UserandpassValidators.shouldBeUnique,
     ),
 
@@ -21,12 +18,11 @@ export class LoginComponent {
       Validators.required,
       Validators.minLength(3),
     ]),
-
-
-
   })
+  login() {
+    this.form.setErrors({
+      invalidLogin: true,
+    });
 
-
-
-
+  }
 }

@@ -15,7 +15,8 @@ export class UserandpassValidators {
                 else
                     resolve(null);
 
-            }, 6000);
+                control.markAsTouched();
+            }, 2000);
         });
     }
 }
