@@ -10,6 +10,7 @@ import { MoviesComponent } from './movies/movies.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 import { PostComponent } from './post/post.component';
+import { PostService } from './service/post.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PostComponent } from './post/post.component';
     HttpModule
 
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [PostService],
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }
