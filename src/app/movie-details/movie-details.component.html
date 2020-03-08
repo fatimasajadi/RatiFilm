@@ -1,2 +1,28 @@
-{{movie | json}}
-<!-- <div><img src="assets/images/{{movie.image}}"></div> -->
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="pic "><img src="assets/images/{{movie.image}}"></div>
+        </div>
+        <div class="col">
+            <div class="title">{{movie.title}}</div>
+            <div class="defi">{{movie.definition}}</div>
+            <p class="price"> {{movie.price}}</p>
+            <div class="row button">
+                <div class="col">
+                    <select class="form-control select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="col"><button class="btn btn-primary">ADD TO BAG</button></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

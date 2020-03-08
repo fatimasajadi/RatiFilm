@@ -4,34 +4,41 @@
         "isFavorite": true,
         "isLiked": true,
         "numberOfLikes": 1,
-        "id": 1
+        "id": 1,
+        "title": "Cinderella",
+        "definition": "Cinderella is a 1950 American animated musical fantasy film produced by Walt Disney and originally released by RKO Radio Pictures.The film was directed by Clyde Geronimi, Hamilton Luske, and Wilfred Jackson. Cinderella is living a dissatisfying life, having lost both parents at a young age, and being forced to work as a scullery maid in her own château. Her stepmother, Lady Tremaine, is cruel to her, and she is jealous of Cinderella's charm and beauty.",
+        "price": "$ 30.00"
     },
     {
         "image": "2.jpg",
         "isFavorite": true,
         "isLiked": false,
         "numberOfLikes": 2,
-        "id": 2
+        "id": 2,
+        "title": "A Star Is Born"
     },
     {
         "image": "3.jpg",
         "isFavorite": false,
         "isLiked": true,
         "numberOfLikes": 3,
-        "id": 3
+        "id": 3,
+        "title": "Boys In The Hood"
     },
     {
         "image": "4.jpg",
         "isFavorite": true,
         "isLiked": true,
         "numberOfLikes": 4,
-        "id": 4
+        "id": 4,
+        "title": "Harry Potter And The Half-blood Prince"
     },
     {
         "image": "5.jpg",
         "isFavorite": true,
         "isLiked": true,
         "numberOfLikes": 5,
-        "id": 5
+        "id": 5,
+        "title": "Harry Potter And The Philsopher's Stone"
     }
 ]

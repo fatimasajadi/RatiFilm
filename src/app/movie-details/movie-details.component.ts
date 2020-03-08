@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MoviesService } from '../movies/movies.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -11,12 +12,19 @@ import { MoviesService } from '../movies/movies.service';
 export class MovieDetailsComponent {
 
   movie = {}
-  constructor() {
-    const id = 1;
-    let service = new MoviesService();
-    service.movieFetch().then((r) => {
-      this.movie = r.find(object => object.id === id)
+  constructor(private route: ActivatedRoute) {
+    // console.log(route);
+    route.paramMap.subscribe(params => {
+      const id = Number(params.get("movieId"))
+      // console.log(id);
+      let service = new MoviesService();
+      service.movieFetch().then((r) => {
+        this.movie = r.find(object => object.id === id)
+      })
+
+
     })
+
 
   }
 

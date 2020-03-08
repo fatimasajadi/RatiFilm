@@ -9,7 +9,7 @@ import { PostComponent } from './post/post.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: '', component: MoviesComponent },
-  { path: 'details/:movie.id', component: MovieDetailsComponent },
+  { path: 'details/:movieId', component: MovieDetailsComponent },
   { path: 'post', component: PostComponent }
 ];
 
