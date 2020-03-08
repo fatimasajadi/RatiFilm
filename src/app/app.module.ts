@@ -11,6 +11,7 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 import { PostComponent } from './post/post.component';
 import { PostService } from './service/post.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PostService } from './service/post.service';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    FormsModule
 
   ],
   providers: [PostService],
