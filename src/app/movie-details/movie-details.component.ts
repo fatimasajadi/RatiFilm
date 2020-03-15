@@ -25,7 +25,7 @@ export class MovieDetailsComponent {
   }
 
   addToCart() {
-    this.shoppingService.updateCount(this.count)
+    this.shoppingService.updateCount(this.count);
   }
 
 

@@ -17,6 +17,6 @@ export class ShoppingCartService {
   }
 
   subscribeCount(cb: Function) {
-    this.cb = cb
+    this.cb = cb;
   }
 }

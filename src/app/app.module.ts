@@ -12,6 +12,7 @@ import { NewCourseFormComponent } from './new-course-form/new-course-form.compon
 import { PostComponent } from './post/post.component';
 import { PostService } from './service/post.service';
 import { FormsModule } from '@angular/forms';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     MoviesComponent,
     MovieDetailsComponent,
     NewCourseFormComponent,
-    PostComponent
+    PostComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,
