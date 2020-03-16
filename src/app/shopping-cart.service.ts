@@ -7,6 +7,10 @@ export class ShoppingCartService {
 
   private count: number = 0
   private cb: Function;
+  private title: string;
+
+  public list = []
+
 
   constructor() {
   }
@@ -18,5 +22,13 @@ export class ShoppingCartService {
 
   subscribeCount(cb: Function) {
     this.cb = cb;
+  }
+
+  getCount() {
+    return this.count;
+  }
+
+  setList(list) {
+    this.list = this.list.concat(list);
   }
 }
