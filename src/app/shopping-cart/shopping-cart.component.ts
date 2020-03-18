@@ -17,7 +17,7 @@ export class ShoppingCartComponent implements OnInit {
   constructor(private shoppingService: ShoppingCartService) {
     this.list = shoppingService.list;
     this.list.forEach(element => this.result += element.count);
-    this.list.forEach(element => this.totalPrice += element.price);
+    this.list.forEach(element => this.totalPrice += (element.price) * (element.count));
     (this.totalPrice).toFixed(2);
 
 
