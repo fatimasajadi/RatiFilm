@@ -15,7 +15,7 @@
 
                 <td>{{item.title}}</td>
                 <td>{{item.count}}</td>
-                <td>${{item.price}}</td>
+                <td>${{item.price.toFixed(2)}}</td>
             </tr>
 
             <tr>
@@ -24,6 +24,7 @@
                 <th scope="col">${{totalPrice}}</th>
 
             </tr>
+            <button class="btn btn-primary checkOut">Check Out</button>
 
         </tbody>
     </table>
