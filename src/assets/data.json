@@ -7,7 +7,7 @@
         "id": 1,
         "title": "Cinderella",
         "definition": "Cinderella is a 1950 American animated musical fantasy film produced by Walt Disney and originally released by RKO Radio Pictures.The film was directed by Clyde Geronimi, Hamilton Luske, and Wilfred Jackson. Cinderella is living a dissatisfying life, having lost both parents at a young age, and being forced to work as a scullery maid in her own château. Her stepmother, Lady Tremaine, is cruel to her, and she is jealous of Cinderella's charm and beauty.",
-        "price": "$ 30.00"
+        "price": 30.00
     },
     {
         "image": "2.jpg",
@@ -17,7 +17,7 @@
         "id": 2,
         "title": "A Star Is Born",
         "definition": "A Star Is Born is a 2018 American romantic drama film produced and directed by Bradley Cooper (in his directorial debut) and written by Cooper, Eric Roth and Will Fetters. It stars Cooper, Lady Gaga, Dave Chappelle, Andrew Dice Clay, and Sam Elliott, and follows a hard-drinking musician (Cooper) who discovers and falls in love with a young singer (Gaga). It is the third remake of the original 1937 film, after the 1954 musical and the 1976 musical.",
-        "price": "$ 25.00"
+        "price": 29.99
     },
     {
         "image": "3.jpg",
@@ -27,7 +27,7 @@
         "id": 3,
         "title": "Boyz N The Hood",
         "definition": "Boyz n the Hood is a 1991 American teen coming-of-age drama film, written and directed by John Singleton in his feature directorial debut, and stars Ice Cube, Cuba Gooding Jr., Morris Chestnut, Laurence Fishburne, Nia Long, Regina King, and Angela Bassett. Boyz n the Hood follows Tre Styles (Gooding Jr.), who is sent to live with his father Furious Styles (Fishburne) in South Central Los Angeles, surrounded by the neighborhood's booming gang culture.",
-        "price": "$ 35.00"
+        "price": 35.00
     },
     {
         "image": "4.jpg",
@@ -37,7 +37,7 @@
         "id": 4,
         "title": "Harry Potter And The Half-blood Prince",
         "definition": "Harry Potter and the Half-Blood Prince is a 2009 fantasy film directed by David Yates and distributed by Warner Bros. It is based on J. K. Rowling's 2005 novel of the same name. The film, which is the sixth instalment in the Harry Potter film series, was written by Steve Kloves and produced by David Heyman and David Barron.The story follows Harry Potter's sixth year at Hogwarts as he receives a mysterious textbook, falls in love, and attempts to retrieve a memory that holds the key to Lord Voldemort downfall.",
-        "price": "$ 29.99"
+        "price": 29.99
     },
     {
         "image": "5.jpg",
@@ -47,6 +47,6 @@
         "id": 5,
         "title": "Harry Potter And The Philsopher's Stone",
         "definition": "Harry Potter and the Philosopher's Stone (released in the United States as Harry Potter and the Sorcerer's Stone) is a 2001 fantasy film directed by Chris Columbus and distributed by Warner Bros. It is based on J. K. Rowling's 1997 novel of the same name. The film is the first instalment of the Harry Potter film series and was written by Steve Kloves and produced by David Heyman. Its story follows Harry Potter's first year at Hogwarts School of Witchcraft and Wizardry as he discovers that he is a famous wizard and begins his education. The film stars Daniel Radcliffe as Harry Potter, with Rupert Grint as Ron Weasley, and Emma Watson as Hermione Granger.",
-        "price": "$ 29.99"
+        "price": 14.99
     }
 ]

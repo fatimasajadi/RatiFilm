@@ -6,6 +6,6 @@ export interface Movie {
     id: number;
     title: string;
     definition: string;
-    price: string
+    price: number;
 
 }
