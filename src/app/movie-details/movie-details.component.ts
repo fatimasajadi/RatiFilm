@@ -34,7 +34,7 @@ export class MovieDetailsComponent {
     // console.log(this.list)
   }
   addToList() {
-    this.list.push({ count: this.count, title: this.movie.title, price: this.movie.price })
+    this.list.push({ count: Number(this.count), title: this.movie.title, price: this.movie.price })
   }
 
 }
