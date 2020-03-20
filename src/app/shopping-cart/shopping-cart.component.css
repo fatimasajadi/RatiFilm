@@ -5,3 +5,16 @@
 .checkOut {
   margin-top: 10px;
 }
+
+.addDokme {
+  display: flex;
+  align-self: center;
+  /* width: 25px;
+  height: 25px; */
+}
+.minusDokme {
+  display: flex;
+  align-self: center;
+  /* width: 25px;
+  height: 25px; */
+}
