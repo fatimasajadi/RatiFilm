@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { PostComponent } from './post/post.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ShippingComponent } from './shipping/shipping.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: '', component: MoviesComponent },
   { path: 'details/:movieId', component: MovieDetailsComponent },
   { path: 'post', component: PostComponent },
-  { path: 'shoppingCart', component: ShoppingCartComponent }
+  { path: 'shoppingCart', component: ShoppingCartComponent },
+  { path: 'shipping', component: ShippingComponent }
 ];
 
 

@@ -13,6 +13,7 @@ import { PostComponent } from './post/post.component';
 import { PostService } from './service/post.service';
 import { FormsModule } from '@angular/forms';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ShippingComponent } from './shipping/shipping.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     MovieDetailsComponent,
     NewCourseFormComponent,
     PostComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    ShippingComponent
   ],
   imports: [
     BrowserModule,
