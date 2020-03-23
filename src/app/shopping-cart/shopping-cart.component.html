@@ -1,6 +1,9 @@
 <div class="container">
     <p class="title">Shopping Cart</p>
-    <p>You have {{count}} items in your shopping cart</p>
+    <div *ngFor='let item of list'>
+        <p>You have {{item.count}} items in your shopping cart.</p>
+    </div>
+
     <table class="table">
 
         <thead>
@@ -22,10 +25,10 @@
                 <td>${{((item.price)*(item.count)).toFixed(2)}}</td>
             </tr>
 
-            <tr>
+            <tr *ngFor='let item of list'>
                 <td></td>
                 <td></td>
-                <th scope="col">${{totalPrice.toFixed(2)}}</th>
+                <th scope="col">${{((item.price)*(item.count)).toFixed(2)}}</th>
             </tr>
 
             <button class="btn btn-primary checkOut" routerLink="/shipping">Check Out</button>
@@ -33,4 +36,3 @@
         </tbody>
     </table>
 </div>
-<button (click)='getItem(item)'>TEST</button>

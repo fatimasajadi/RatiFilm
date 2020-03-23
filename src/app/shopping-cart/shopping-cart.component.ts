@@ -8,36 +8,32 @@ import { ShoppingCartService } from '../shopping-cart.service';
 })
 export class ShoppingCartComponent implements OnInit {
 
-  private list;
+  private list = [];
   private count: number = 0;
   private result: number = 0;
   private totalPrice: number = 0;
-  finalCount: number;
-  // item: number = 0;
-  fi: number;
-
+  private item: number = 0;
 
   constructor(private shoppingService: ShoppingCartService) {
     this.list = shoppingService.list;
     this.list.forEach(element => this.result += element.count);
     this.list.forEach(element => this.totalPrice += (element.price) * (element.count));
     (this.totalPrice).toFixed(2);
-
-
   }
 
   ngOnInit() { }
 
+
   addOne(item) {
     item.count += 1;
+    console.log(item.count)
   }
 
   minusOne(item) {
     item.count -= 1;
   }
 
-  getItem(item) {
-    console.log(item)
-  }
+
+
 
 }
