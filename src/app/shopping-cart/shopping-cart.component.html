@@ -1,7 +1,8 @@
 <div class="container">
     <p class="title">Shopping Cart</p>
-    <div *ngFor='let item of list'>
-        <p>You have {{item.count}} items in your shopping cart.</p>
+    <div >
+        
+        <p>You have {{totalCount}} items in your shopping cart.</p>
     </div>
 
     <table class="table">
@@ -25,10 +26,10 @@
                 <td>${{((item.price)*(item.count)).toFixed(2)}}</td>
             </tr>
 
-            <tr *ngFor='let item of list'>
+            <tr>
                 <td></td>
                 <td></td>
-                <th scope="col">${{((item.price)*(item.count)).toFixed(2)}}</th>
+                <th scope="col">{{total| currency:'USD'}}</th>
             </tr>
 
             <button class="btn btn-primary checkOut" routerLink="/shipping">Check Out</button>

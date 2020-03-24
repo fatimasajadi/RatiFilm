@@ -29,8 +29,10 @@
                 <thead>
                     <tr>
                         <td scope="col">
-                            <strong>Order Summary</strong>
-                            <p>You have folan items in your shopping cart.</p>
+                            <strong class='title'>Order Summary</strong>
+                            
+                                <!-- <p>You have {{totalCount}} items in your shopping cart.</p> -->
+                            
                         </td>
                         <th></th>
                         <th></th>
@@ -40,14 +42,21 @@
 
                 </thead>
                 <tbody>
+                    <tr *ngFor='let item of list'>
+                        <td>{{item.title}}</td>
+                        <td class="row">
+                            <div style="padding: 0 10px;">{{item.count}}</div>
+                        </td>
+                        <td>${{((item.price)*(item.count)).toFixed(2)}}</td>
+                    </tr>
 
-                    <tr>
+                    <!-- <tr>
                         <td>hichi</td>
                         <td class="row">
 
                         </td>
                         <td>hichi</td>
-                    </tr>
+                    </tr> -->
 
 
                 </tbody>

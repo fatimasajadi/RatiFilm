@@ -7,7 +7,13 @@ import { ShoppingCartService } from '../shopping-cart.service';
 })
 export class ShippingComponent implements OnInit {
 
-  constructor() { }
+  private list = [];
+  
+  constructor( private shoppingService: ShoppingCartService) {
+    this.list = shoppingService.list;
+    
+
+   }
 
   ngOnInit() {
   }
