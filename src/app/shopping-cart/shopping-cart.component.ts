@@ -13,7 +13,7 @@ export class ShoppingCartComponent implements OnInit {
   // private result: number = 0;
   // private totalPrice: number = 0;
   private total=0;
-  private totalCount=0;
+  private totalCount:number =0;
 
   constructor(private shoppingService: ShoppingCartService) {
     this.list = shoppingService.list;
@@ -36,9 +36,8 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   sumCalculator() {
-    this.total = 0;
-    this.totalCount=0;
-    this.list.forEach(item => this.total += item.price * item.count);
-    this.list.forEach(item => this.totalCount += item.count);
+    this.shoppingService.totalCalculator();
+    this.totalCount = this.shoppingService.totalCount;
+    this.total = this.shoppingService.total;
   }
 }

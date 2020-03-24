@@ -8,14 +8,21 @@ import { ShoppingCartService } from '../shopping-cart.service';
 export class ShippingComponent implements OnInit {
 
   private list = [];
+  private total=0;
+  private totalCount=0;
   
   constructor( private shoppingService: ShoppingCartService) {
     this.list = shoppingService.list;
-    
-
+    this.shoppingService.totalCalculator;
+    this.getCountTotal();
    }
 
-  ngOnInit() {
+  ngOnInit() {  }
+
+  getCountTotal(){
+    this.shoppingService.totalCalculator;
+    this.totalCount=this.shoppingService.totalCount;
+    this.total=this.shoppingService.total;
   }
 
 }
