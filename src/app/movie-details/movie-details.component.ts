@@ -12,13 +12,12 @@ import { Movie } from 'src/types';
 export class MovieDetailsComponent {
   private movie;
   count: number;
-  private list: any[] = [];
 
   constructor(private route: ActivatedRoute, private shoppingService: ShoppingCartService) {
-    // console.log(route);
+   
     route.paramMap.subscribe(params => {
       const id = Number(params.get("movieId"))
-      // console.log(id);
+     
       let service = new MoviesService();
       service.movieFetch().then((r) => {
         this.movie = r.find(object => object.id === id)
@@ -28,14 +27,10 @@ export class MovieDetailsComponent {
 
   addToCart() {
     this.shoppingService.updateCount(this.count);
-    this.addToList();
-    this.shoppingService.setList(this.list);
-    // console.log("hi")
-    // console.log(this.list)
+    const newItem = { count: Number(this.count), title: this.movie.title, price: this.movie.price };
+    this.shoppingService.addToCart(newItem);
   }
-  addToList() {
-    this.list.push({ count: Number(this.count), title: this.movie.title, price: this.movie.price })
-  }
+
 
 }
 

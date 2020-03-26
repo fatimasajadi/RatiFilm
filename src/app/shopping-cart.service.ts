@@ -10,10 +10,7 @@ export class ShoppingCartService {
   private title: string;
   public total=0;
   public totalCount=0;
-
   public list = []
-
-
   constructor() {
   }
 
@@ -30,15 +27,15 @@ export class ShoppingCartService {
     return this.count;
   }
 
-  setList(list) {
-    this.list = this.list.concat(list);
+  addToCart(item) {
+    this.list = this.list.concat(item);
   }
 
   totalCalculator(){
     this.total = 0;
-      this.totalCount=0;
+    this.totalCount=0;
     this.list.forEach(item => this.total += item.price * item.count);
     this.list.forEach(item => this.totalCount += item.count);
-
   }
+  
 }

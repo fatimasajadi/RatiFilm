@@ -1,10 +1,20 @@
 <nav class="navbar navbar-light bg-light justify-content-between">
 
-    <a class="navbar-brand">RatiFilm <i class="fa fa-shopping-cart" routerLink="/shoppingCart"></i>
-        <span style="margin-left:3px; font-size:12px;">{{count}}</span>
-    </a>
+    <div class='row'>
+        <a class="navbar-brand col" routerLink="">RatiFilm </a>
+        <i class="fa fa-shopping-cart col" routerLink="/shoppingCart"><span style="margin-left:3px; font-size:12px;">{{count}}</span></i>
+        
 
-    <a routerLink="/login" class="btn btn-outline-success my-2 my-sm-0">LogIn</a>
+
+    </div>
+    
+<div class>
+    <a routerLink="/login" class="btn btn-outline-success my-2 my-sm-0 col">LogIn</a>
+</div>
+    
 </nav>
 
 <router-outlet></router-outlet>
+
+
+
