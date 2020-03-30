@@ -13,8 +13,10 @@ export class MovieDetailsComponent {
   private movie;
   count: number;
 
+
   constructor(private route: ActivatedRoute, private shoppingService: ShoppingCartService) {
    
+    
     route.paramMap.subscribe(params => {
       const id = Number(params.get("movieId"))
      
@@ -29,7 +31,9 @@ export class MovieDetailsComponent {
     this.shoppingService.updateCount(this.count);
     const newItem = { count: Number(this.count), title: this.movie.title, price: this.movie.price };
     this.shoppingService.addToCart(newItem);
+  
   }
+  
 
 
 }

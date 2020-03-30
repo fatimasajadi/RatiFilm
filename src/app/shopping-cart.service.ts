@@ -27,8 +27,42 @@ export class ShoppingCartService {
     return this.count;
   }
 
-  addToCart(item) {
-    this.list = this.list.concat(item);
+  addToCart(newItem) {
+    const existingItem = this.list.find(item => item.title === newItem.title);
+
+    if (existingItem) {
+      existingItem.count += newItem.count;
+    } else {
+      this.list.push(newItem);
+    }
+
+    // return;
+    // var i;
+    // for (i = 0; i < this.list.length; i++) {
+    //   if(this.list.length === 0){
+    //     this.list = this.list.concat(newItem);
+    //     console.log("khalie");
+    //     console.log(this.list);
+    //     console.log(newItem)
+
+    //   }else if(this.list[i].title == newItem.title){
+    //     this.list[i].count=this.list[i].count + newItem.count;
+    //     console.log("dg khali nis");
+    //     console.log(this.list);
+    //     console.log(newItem)
+
+
+    //   }else{
+    //     this.list = this.list.concat(newItem);
+    //     console.log("akhareshe");
+    //     console.log(this.list);
+     
+    //   }
+
+    // }
+
+
+
   }
 
   totalCalculator(){
