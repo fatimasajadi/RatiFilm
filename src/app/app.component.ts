@@ -7,11 +7,12 @@ import { ShoppingCartService } from './shopping-cart.service'
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    count = ""
+    count = 0
 
     constructor(private shoppingService: ShoppingCartService) {
-        shoppingService.subscribeCount((count) => {
-            this.count = count;
+        this.count = shoppingService.getCount();
+        shoppingService.subscribeCart(() => {
+            this.count = shoppingService.getCount();
         })
 
     }

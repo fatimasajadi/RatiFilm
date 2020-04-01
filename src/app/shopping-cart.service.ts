@@ -1,30 +1,32 @@
 import { Injectable } from '@angular/core';
 
+const initalCart = JSON.parse(localStorage.getItem('cart') || "[]")
+
 @Injectable({
   providedIn: 'root'
 })
 export class ShoppingCartService {
 
-  private count: number = 0
   private cb: Function;
   private title: string;
   public total=0;
   public totalCount=0;
-  public list = []
+  public list = initalCart
   constructor() {
   }
 
-  updateCount(count: number) {
-    this.count += Number(count);
-    this.cb(this.count);
-  }
-
-  subscribeCount(cb: Function) {
+  subscribeCart(cb: Function) {
     this.cb = cb;
   }
 
   getCount() {
-    return this.count;
+    let count = 0;
+    for (let i = 0; i < this.list.length; i++) {
+      const item = this.list[i];
+      count += item.count;
+    }
+
+    return count;
   }
 
   addToCart(newItem) {
@@ -36,33 +38,7 @@ export class ShoppingCartService {
       this.list.push(newItem);
     }
 
-    // return;
-    // var i;
-    // for (i = 0; i < this.list.length; i++) {
-    //   if(this.list.length === 0){
-    //     this.list = this.list.concat(newItem);
-    //     console.log("khalie");
-    //     console.log(this.list);
-    //     console.log(newItem)
-
-    //   }else if(this.list[i].title == newItem.title){
-    //     this.list[i].count=this.list[i].count + newItem.count;
-    //     console.log("dg khali nis");
-    //     console.log(this.list);
-    //     console.log(newItem)
-
-
-    //   }else{
-    //     this.list = this.list.concat(newItem);
-    //     console.log("akhareshe");
-    //     console.log(this.list);
-     
-    //   }
-
-    // }
-
-
-
+    this.save()
   }
 
   totalCalculator(){
@@ -72,4 +48,9 @@ export class ShoppingCartService {
     this.list.forEach(item => this.totalCount += item.count);
   }
   
+
+  save() {
+    localStorage.setItem('cart', JSON.stringify(this.list))
+  }
 }
+
