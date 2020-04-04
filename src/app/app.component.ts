@@ -10,9 +10,8 @@ export class AppComponent {
     count = 0
 
     constructor(private shoppingService: ShoppingCartService) {
-        this.count = shoppingService.getCount();
         shoppingService.subscribeCart(() => {
-            this.count = shoppingService.getCount();
+            this.count = shoppingService.totalCount;
         })
 
     }

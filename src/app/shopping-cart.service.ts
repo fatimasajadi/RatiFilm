@@ -6,27 +6,16 @@ const initalCart = JSON.parse(localStorage.getItem('cart') || "[]")
   providedIn: 'root'
 })
 export class ShoppingCartService {
-
   private cb: Function;
   private title: string;
-  public total=0;
-  public totalCount=0;
+  public total = 0;
+  public totalCount = 0;
   public list = initalCart
   constructor() {
   }
 
   subscribeCart(cb: Function) {
     this.cb = cb;
-  }
-
-  getCount() {
-    let count = 0;
-    for (let i = 0; i < this.list.length; i++) {
-      const item = this.list[i];
-      count += item.count;
-    }
-
-    return count;
   }
 
   addToCart(newItem) {
@@ -41,16 +30,19 @@ export class ShoppingCartService {
     this.save()
   }
 
-  totalCalculator(){
-    this.total = 0;
-    this.totalCount=0;
-    this.list.forEach(item => this.total += item.price * item.count);
-    this.list.forEach(item => this.totalCount += item.count);
-  }
-  
+
 
   save() {
+    this.total = 0;
+    this.totalCount = 0;
+    this.list.forEach(item => this.total += item.price * item.count);
+    this.list.forEach(item => this.totalCount += item.count);
+
+    
     localStorage.setItem('cart', JSON.stringify(this.list))
+    if (this.cb) {
+      this.cb()
+    }
   }
 }
 

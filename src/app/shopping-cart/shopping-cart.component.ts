@@ -31,7 +31,7 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   sumCalculator() {
-    this.shoppingService.totalCalculator();
+    this.shoppingService.save();
     this.totalCount = this.shoppingService.totalCount;
     this.total = this.shoppingService.total;
   }
